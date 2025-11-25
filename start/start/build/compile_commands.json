@@ -1,0 +1,27 @@
+[
+{
+  "directory": "E:/diy-linux-os/start/start/build",
+  "command": "C:\\x86_64-elf-tools-windows\\bin\\x86_64-elf-gcc.exe -IE:/diy-linux-os/start/start/source -m32 -g -g -o source\\boot\\CMakeFiles\\boot.dir\\start.S.obj -c E:\\diy-linux-os\\start\\start\\source\\boot\\start.S",
+  "file": "E:\\diy-linux-os\\start\\start\\source\\boot\\start.S"
+},
+{
+  "directory": "E:/diy-linux-os/start/start/build",
+  "command": "C:\\x86_64-elf-tools-windows\\bin\\x86_64-elf-gcc.exe -IE:/diy-linux-os/start/start/source -g -c -O0 -m32 -fno-pie -fno-stack-protector -fno-asynchronous-unwind-tables -g -o source\\boot\\CMakeFiles\\boot.dir\\boot.c.obj -c E:\\diy-linux-os\\start\\start\\source\\boot\\boot.c",
+  "file": "E:\\diy-linux-os\\start\\start\\source\\boot\\boot.c"
+},
+{
+  "directory": "E:/diy-linux-os/start/start/build",
+  "command": "C:\\x86_64-elf-tools-windows\\bin\\x86_64-elf-gcc.exe -IE:/diy-linux-os/start/start/source -m32 -g -g -o source\\loader\\CMakeFiles\\loader.dir\\start.S.obj -c E:\\diy-linux-os\\start\\start\\source\\loader\\start.S",
+  "file": "E:\\diy-linux-os\\start\\start\\source\\loader\\start.S"
+},
+{
+  "directory": "E:/diy-linux-os/start/start/build",
+  "command": "C:\\x86_64-elf-tools-windows\\bin\\x86_64-elf-gcc.exe -IE:/diy-linux-os/start/start/source -g -c -O0 -m32 -fno-pie -fno-stack-protector -fno-asynchronous-unwind-tables -g -o source\\loader\\CMakeFiles\\loader.dir\\loader_16.c.obj -c E:\\diy-linux-os\\start\\start\\source\\loader\\loader_16.c",
+  "file": "E:\\diy-linux-os\\start\\start\\source\\loader\\loader_16.c"
+},
+{
+  "directory": "E:/diy-linux-os/start/start/build",
+  "command": "C:\\x86_64-elf-tools-windows\\bin\\x86_64-elf-gcc.exe -IE:/diy-linux-os/start/start/source -g -c -O0 -m32 -fno-pie -fno-stack-protector -fno-asynchronous-unwind-tables -g -o source\\loader\\CMakeFiles\\loader.dir\\loader_32.c.obj -c E:\\diy-linux-os\\start\\start\\source\\loader\\loader_32.c",
+  "file": "E:\\diy-linux-os\\start\\start\\source\\loader\\loader_32.c"
+}
+]
