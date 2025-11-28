@@ -23,7 +23,6 @@ static void detect_memory(void){
     boot_info.ram_region_count = 0;
     for (int i = 0; i < BOOT_RAM_REGION_MAX; i++){
         SMAP_entry_t* entry = &smap_entry;
-        show_msg("enter asm\n");
         __asm__(
             "int $0x15"
             :"=a"(signature),"=c"(bytes),"=b"(contID)
@@ -49,9 +48,31 @@ static void detect_memory(void){
     }
     show_msg("load OK\r\n");
 }
+uint16_t gdt_table[][4]={
+    {0,0,0,0},
+    {0xFFFF,0x0000,0x9a00,0x00cf},
+    {0xFFFF,0x0000,0x9200,0x00cf},
 
+};
+static void enter_protect_mode(void){
+    //1.关中断
+    cli();
+    //2.打开A20地址线
+    uint8_t v = inb(0x92);
+    outb(0x92,v|0x2);
+    //3.加载lgdt表
+    lgdt((uint32_t)gdt_table,sizeof(gdt_table));
+    //4.Cr0寄存器中的PE位置1
+    uint32_t cr0 = read_cr0();
+    write_cr0(cr0 | (1 << 0));
+    //5.清空流水线
+    far_jump(8,(uint32_t)protect_mode_entry);
+
+
+}
 void loader_entry(void){
     show_msg("loading.........\r\n");
+    enter_protect_mode();
     detect_memory();
     for(;;){
         
